@@ -1,6 +1,7 @@
 # Traffic condition checker
 
-Our app displays driving conditions in various spots, using weather and road data, fetched from FMI and Digitraffic APIs.
+## Introduction
+Simple traffic condition checker app that displays driving conditions in various spots, using weather and road data, fetched from FMI and Digitraffic APIs. Group project of three for software design course. MVC design pattern implemented with java. My responsibilities were implementing model and planning the MVC implementation. I wrote weatherApi.java, Model.java and part of digiTrafficExtractor.java
 
 ## Installation
 
