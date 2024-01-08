@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="571.0" prefWidth="1017.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchBar" prefHeight="25.0" prefWidth="255.0" />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchStation" text="Search" />
+               </children>
+            </HBox>
+            <ChoiceBox fx:id="resultsMenu" prefHeight="25.0" prefWidth="306.0" />
+            <Button fx:id="resultsBtn" mnemonicParsing="false" onAction="#displayInformation" text="Show results">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="stationLabel" text="Station name here">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefHeight="448.0" prefWidth="766.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <ImageView fx:id="trafficCam" fitHeight="187.0" fitWidth="326.0" layoutX="362.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="stationLabel1" layoutX="495.0" layoutY="209.0" text="Conditions:" />
+                  <Label fx:id="emojiLabel" contentDisplay="CENTER" layoutX="498.0" layoutY="226.0" text="Asciiemoji" />
+                  <ListView fx:id="trafficList" layoutX="696.0" layoutY="12.0" prefHeight="376.0" prefWidth="340.0" style="-fx-font-family: monospace;" />
+                  <ListView fx:id="weatherListView" layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="340.0" style="-fx-font-family: monospace;" />
+               </children>
+            </AnchorPane>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="quitBtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#quitProgram" text="Quit" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>
